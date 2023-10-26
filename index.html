@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="gmbh, malerei, gipserei, lackiererei, renovationen, walenstadt"
+    />
+    <meta
+      name="description"
+      content="Malerfachgeschäft Stam GmbH - Wir bieten Malerei, Gipserei, Lackiererei und Renovationsdienste in Walenstadt an. Kontaktieren Sie uns für Fragen oder Feedback."
+    />
+    <title>Stam GmbH</title>
+    <link rel="icon" type="image/x-icon" href="images/WEB LOGO.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggler" />
+        <label for="menu-toggler" id="hamburger-btn">
+          <img src="images/ham-menu.png" alt="img" class="hamMenu" />
+        </label>
+        <ul class="all-links">
+          <li><a href="#home" onclick="closeMenu()">Home</a></li>
+          <li>
+            <a href="#services" onclick="closeMenu()">Dienstleistungen</a>
+          </li>
+          <li><a href="#contact" onclick="closeMenu()">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="baner"></div>
+    <section class="homepage" id="home">
+      <div class="content">
+        <div class="contentLogo">
+          <img src="images/WEB LOGO.png" alt="img" class="logoImg" />
+          <img src="images/WEB TEXT.png" alt="img" class="logoText" />
+        </div>
+        <a href="#services">Unsere Dienstleistungen</a>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h2 style="text-align: center">Unsere Dienstleistungen</h2>
+      <ul class="cards">
+        <li class="card">
+          <img src="images/molerei.jpg" alt="img" />
+          <h3>Malerei</h3>
+          <!-- <p></p> -->
+        </li>
+        <li class="card">
+          <img src="images/gipserei.jpeg" alt="img" />
+          <h3>Gipserei</h3>
+          <!-- <p></p> -->
+        </li>
+        <li class="card">
+          <img src="images/lakirerei.jpg" alt="img" />
+          <h3>Lackiererei</h3>
+          <!-- <p></p> -->
+        </li>
+        <li class="card">
+          <img src="images/neu-old.jpeg" alt="img" />
+          <h3>Neu - Altbau</h3>
+          <!-- <p></p> -->
+        </li>
+        <li class="card">
+          <img src="images/renovation.jpg" alt="img" />
+          <h3>Renovationen</h3>
+          <!-- <p></p> -->
+        </li>
+        <li class="card">
+          <img src="images/decorative.jpg" alt="img" />
+          <h3>Dekorative Techniken</h3>
+          <!-- <p></p> -->
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Kontaktiere uns</h2>
+      <p>Kontaktieren Sie uns für Fragen oder Feedback.</p>
+      <div class="row">
+        <div class="col information">
+          <div class="contact-details">
+            <p>
+              <img src="images/location.png" alt="img" class="contactIcon" />
+              Sarganserstr. 36. 8880 Walenstadt
+            </p>
+            <p>
+              <img src="images/email.png" alt="img" class="contactIcon" />
+              info@stammaler.ch
+            </p>
+            <p>
+              <img src="images/phone.png" alt="img" class="contactIcon" /> +41
+              79 440 35 39
+            </p>
+            <p>
+              <img src="images/clock.png" alt="img" class="contactIcon" />
+              Montag - Freitag: 8:00 Uhr - 12:00 Uhr 13:00 Uhr - 17:00 Uhr
+            </p>
+            <p>
+              <img src="images/clock.png" alt="img" class="contactIcon" />
+              Termin nach Telefonischer Vereinbarung
+            </p>
+            <p>
+              <img src="images/site.png" alt="img" class="contactIcon" />
+              www.stammaler.ch
+            </p>
+          </div>
+        </div>
+        <div class="col form">
+          <form action="https://formsubmit.co/your@email.com" method="POST">
+            <input type="text" placeholder="Name*" required />
+            <input type="email" placeholder="Email*" required />
+            <textarea placeholder="Nachricht*" required></textarea>
+            <button id="submit" type="submit">Nachricht senden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <span
+          >Malerfachgeschäft Stam GmbH | Sarganserstr. 36. | 8880 Walenstadt |
+          Tel: +41 79 440 35 39 | info@stammaler.ch</span
+        >
+      </div>
+    </footer>
+  </body>
+  <script>
+    function closeMenu() {
+      var menuToggler = document.getElementById("menu-toggler");
+      menuToggler.checked = false;
+    }
+  </script>
+</html>
