@@ -16,8 +16,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+    </div>
     <header>
       <nav class="navbar">
+        <a class="navbar-brand" href="index.html">
+          <span> STAM GmbH </span>
+        </a>
         <input type="checkbox" id="menu-toggler" />
         <label for="menu-toggler" id="hamburger-btn">
           <img src="images/ham-menu.png" alt="img" class="hamMenu" />
@@ -71,7 +78,12 @@
           <!-- <p></p> -->
         </li>
         <li class="card">
-          <img src="images/decorative.jpg" alt="img" />
+          <img src="images/sanierungen.jpeg" alt="img" />
+          <h3>Sanierungen</h3>
+          <!-- <p></p> -->
+        </li>
+        <li class="card">
+          <img src="images/decorative.jpeg" alt="img" />
           <h3>Dekorative Techniken</h3>
           <!-- <p></p> -->
         </li>
@@ -135,5 +147,23 @@
       var menuToggler = document.getElementById("menu-toggler");
       menuToggler.checked = false;
     }
+    var cards = document.querySelectorAll(".card");
+
+    cards.forEach(function (card) {
+      card.addEventListener("click", function () {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+
+        modal.style.display = "flex";
+        modalImg.src = this.querySelector("img").src;
+      });
+    });
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function () {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    };
   </script>
 </html>
