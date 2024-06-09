@@ -34,6 +34,9 @@
           <li>
             <a href="#services" onclick="closeMenu()">Dienstleistungen</a>
           </li>
+          <li>
+            <a href="#slidershow" onclick="closeMenu()">Galerie</a>
+          </li>
           <li><a href="#contact" onclick="closeMenu()">Kontakt</a></li>
         </ul>
       </nav>
@@ -89,7 +92,70 @@
         </li>
       </ul>
     </section>
+    <section class="slidershow" id="slidershow">
+      <h2 style="text-align: center">Galerie</h2>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/slider1.jpeg" style="width: 100%" />
+        </div>
 
+        <div class="mySlides fade">
+          <img src="images/slider2.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider3.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider4.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider5.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider6.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider7.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider8.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider9.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider10.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slider11.jpg" style="width: 100%" />
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+        <span class="dot" onclick="currentSlide(11)"></span>
+      </div>
+    </section>
     <section class="contact" id="contact">
       <h2>Kontaktiere uns</h2>
       <p>Kontaktieren Sie uns für Fragen oder Feedback.</p>
@@ -106,7 +172,7 @@
             </p>
             <p>
               <img src="images/phone.png" alt="img" class="contactIcon" /> +41
-              79 440 35 39
+              79 545 57 57
             </p>
             <p>
               <img src="images/clock.png" alt="img" class="contactIcon" />
@@ -137,12 +203,42 @@
       <div>
         <span
           >Malerfachgeschäft Stam GmbH | Sarganserstr. 36. | 8880 Walenstadt |
-          Tel: +41 79 440 35 39 | info@stammaler.ch</span
+          Tel: +41 79 545 57 57 | info@stammaler.ch</span
         >
       </div>
     </footer>
   </body>
   <script>
+    let slideIndex = 1;
+
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
     function closeMenu() {
       var menuToggler = document.getElementById("menu-toggler");
       menuToggler.checked = false;
